@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/ticket.dart';
+import 'detail_screen.dart';
 
 class TicketHistoryScreen extends StatelessWidget {
   const TicketHistoryScreen({super.key});
@@ -41,6 +42,15 @@ class TicketHistoryScreen extends StatelessWidget {
             ),
             elevation: 5,
             child: ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) =>
+                        DetailScreen(movie: ticket.movie, ticket: ticket),
+                  ),
+                );
+              },
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(

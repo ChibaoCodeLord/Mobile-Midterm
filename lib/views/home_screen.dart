@@ -28,7 +28,6 @@ class HomeScreen extends StatelessWidget {
               elevation: 5,
               child: Row(
                 children: [
-                  // Poster
                   ClipRRect(
                     borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(12),
@@ -42,7 +41,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 12),
-                  // Tên phim + suất chiếu
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
